@@ -1,0 +1,185 @@
+/* Set whole page background */
+html, body {
+    background: #ffcccc;
+}
+
+.games-container {
+    padding: 2em;  
+}
+
+h1 {
+    margin: 0 2em 1em;
+    text-align: center;
+}
+
+/* Grid layout for game cards */
+.games-grid {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    margin-top: 3em;
+}
+
+/* Individual game card styling */
+.game-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ccc;  /* updated border style same as in create.css */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Game image styling */
+.game-image {
+    width: 100%;
+    height: 173px;
+    object-fit: cover;
+}
+
+/* Game title styling */
+.game-title {
+    font-size: 1.5em;
+    margin: 0.3em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Game description styling */
+.game-description {
+    font-size: 1em;
+    margin: 0.5em;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Players info styling */
+.game-players {
+    font-size: 1em;
+    margin: 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Category info styling */
+.game-category {
+    font-size: 1em;
+    margin: 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Action buttons container */
+.game-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+
+/* Button styling */
+.edit-btn, .delete-btn {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.edit-btn {
+    background-color: green;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: none;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+/* Styling for update form pop-up/modal */
+.update-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.3);  /* lighter overlay similar to create.css */
+    z-index: 1000;
+}
+
+/* Styling for the modal form */
+.update-form-container form {
+    background: #f9f9f9;           /* updated pop-up background */
+    border: 1px solid #ccc;       /* added border */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);  /* new shadow for a modern look */
+    padding: 2em;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+}
+
+/* Input and textarea styling within the modal */
+.update-form-container input,
+.update-form-container textarea,
+.update-form-container select {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Modal image preview styling */
+.modal-game-image {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin-bottom: 1em;
+}
+
+/* Button group styling within the modal */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.cancel-btn, .submit-btn {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.submit-btn {
+    background-color: green;
+    color: #ffffff;
+    transition: none;
+}
+
+

@@ -1,0 +1,92 @@
+.create-game-page {
+    width: 800px; /* doubled width */
+    margin: 3.5% auto; /* increased top margin to move container lower */
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(231,76,60,0.6); /* added red border accent */
+}
+
+.create-game-page h1 {
+    font-size: 2.2em; /* increased heading text size */
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.create-game-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    
+}
+
+.create-game-page form input,
+.create-game-page form textarea,
+.create-game-page form select {
+    width: 100%;
+    padding: 12px; /* updated padding from login.css design */
+    margin: 2px 0; /* added margin */
+    border: 1px solid #e74c3c; /* updated red border accent */
+    border-radius: 8px; /* updated border radius */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* added subtle box-shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+.create-game-page form input:focus,
+.create-game-page form textarea:focus,
+.create-game-page form select:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.5); /* red focus glow from login.css */
+    outline: none;
+}
+
+/* Allow textarea to grow vertically */
+.create-game-page form textarea {
+    resize: vertical;
+    border: 1px solid #e74c3c; /* added red border accent */
+    font-size: 1.2em;
+    font-weight: normal;
+    color: inherit;
+}
+
+/* Center the submit button */
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:active {
+    background: linear-gradient(45deg, #ff4b4b, #ff1b1b);  /* keep same gradient on click */
+    -webkit-tap-highlight-color: transparent;  /* prevent black tap highlight */
+}
+
+@media (max-width: 768px) {
+    .create-game-page {
+        width: 95%; /* make container fluid for mobile */
+        margin: 140px auto 5% auto; /* added top margin for navbar space */
+        padding: 1em; /* reduce padding for smaller screens */
+    }
+    
+    .create-game-page h1 {
+        font-size: 1.8em; /* slightly smaller heading for mobile */
+    }
+    
+    .create-game-page form input,
+    .create-game-page form textarea,
+    .create-game-page form select {
+        padding: 10px; /* adjust input padding on mobile */
+    }
+}

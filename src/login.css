@@ -1,0 +1,145 @@
+/* Global reset & typography */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; font-family: 'Poppins', sans-serif; background: #f7f7f7; }
+
+/* Modified login page becomes a full-page centered container */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 91vh;  
+  background: #ffcccc;  /* red background added */
+}
+
+/* New wrapper card for the entire login container */
+.login-wrapper {
+  display: flex;
+  width: 1800px;          /* increased from 800px, making the card 2x wider */
+  height: 720px;
+  max-width: 95%;
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);  /* enhanced container box shadow */
+  overflow: hidden;
+}
+
+/* Left side: illustration section */
+.illustration {
+  position: relative; /* enable absolute positioning for overlay text */
+  width: 50%;
+  background: #ffe6e6; /* updated to a light red tint */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ensure no overflow */
+}
+.illustration img {
+  /* Updated to fit the container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* Right side: login card with glassmorphism */
+.login-card {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.login-form-container {
+  background: rgba(255,255,255,0.7);
+  padding: 100px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  border: 2px solid rgba(231,76,60,0.6); /* added red border accent */
+}
+
+/* Title and welcome message */
+.login-form-container h1 { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 2em; 
+  margin-bottom: 10px; 
+}
+.login-form-container p { margin-bottom: 20px; color: #555; }
+
+/* Form styling */
+.login-form-container form { display: flex; flex-direction: column; }
+.login-form-container input[type="email"],
+.login-form-container input[type="password"] {
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #e74c3c; /* updated to red border accent */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+.login-form-container input:focus {
+  border-color: #e74c3c; 
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.5); /* red focus glow */
+  outline: none;
+}
+
+/* Sign In button with modern gradient */
+.login-form-container .signin-btn {
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background-image: linear-gradient(45deg, #ff6b6b, #ff3b3b);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-image 0.3s ease;
+}
+.login-form-container .signin-btn:hover {
+  background-image: linear-gradient(45deg, #ff4b4b, #ff1b1b);
+}
+
+/* Add responsive styling for mobile devices */
+@media screen and (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  
+  .illustration {
+    display: none; 
+  }
+  
+  .login-card {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  
+  .login-form-container {
+    padding: 50px;
+    margin: 20px auto;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .login-form-container input[type="text"],
+  .login-form-container input[type="password"] {
+    text-align: center;
+  }
+
+}
+
+.welcome-email {
+  color: #000000;
+  font-size: 1em; 
+  font-weight: bold;
+  text-align: center;
+}
+
